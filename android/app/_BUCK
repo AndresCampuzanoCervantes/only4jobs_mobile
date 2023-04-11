@@ -35,12 +35,12 @@ android_library(
 
 android_build_config(
     name = "build_config",
-    package = "com.only4jobs_mobile",
+    package = "com.only4jobs",
 )
 
 android_resource(
     name = "res",
-    package = "com.only4jobs_mobile",
+    package = "com.only4jobs",
     res = "src/main/res",
 )
 

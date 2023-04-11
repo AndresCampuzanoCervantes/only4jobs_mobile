@@ -1,5 +1,15 @@
 apply plugin: "com.android.application"
 
+project.ext.envConfigFiles = [
+    debug: ".env.dev",
+    release: ".env.prod",
+    test: ".env.test",
+    anothercustombuild: ".env",
+]
+
+apply from: project(':react-native-config').projectDir.getPath() + "/dotenv.gradle"
+
+
 import com.android.build.OutputFile
 import org.apache.tools.ant.taskdefs.condition.Os
 
@@ -135,7 +145,7 @@ android {
     compileSdkVersion rootProject.ext.compileSdkVersion
 
     defaultConfig {
-        applicationId "com.only4jobs_mobile"
+        applicationId "com.only4jobs"
         minSdkVersion rootProject.ext.minSdkVersion
         targetSdkVersion rootProject.ext.targetSdkVersion
         versionCode 1
@@ -211,6 +221,12 @@ android {
         }
     }
     signingConfigs {
+        release {
+            storeFile file('release.keystore')
+            storePassword 'only4jobsapp'
+            keyAlias 'only4jobsapp'
+            keyPassword 'only4jobsapp'
+        }
         debug {
             storeFile file('debug.keystore')
             storePassword 'android'
@@ -225,7 +241,7 @@ android {
         release {
             // Caution! In production, you need to generate your own keystore file.
             // see https://reactnative.dev/docs/signed-apk-android.
-            signingConfig signingConfigs.debug
+            signingConfig signingConfigs.release
             minifyEnabled enableProguardInReleaseBuilds
             proguardFiles getDefaultProguardFile("proguard-android.txt"), "proguard-rules.pro"
         }
