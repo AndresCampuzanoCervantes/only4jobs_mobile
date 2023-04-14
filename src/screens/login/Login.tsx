@@ -56,7 +56,7 @@ const Login = ({ navigation }: Props) => {
                             fontWeight: 'medium',
                             fontSize: 'sm',
                         }}
-                        onPress={() => navigation.navigate('Register')}
+                        onPress={() => navigation.navigate('registro')}
                     >
                         Registrarse
                     </Link>
@@ -64,7 +64,7 @@ const Login = ({ navigation }: Props) => {
                 <View style={{ marginTop: 50 }}>
                     <TouchableOpacity
                         style={stylesLogin.button}
-                        onPress={() => { }}>
+                        onPress={() => navigation.replace('home')}>
                         <Text fontWeight={700} style={stylesLogin.textbutton}>
                             Iniciar sesión
                         </Text>
@@ -72,9 +72,9 @@ const Login = ({ navigation }: Props) => {
                 </View>
                 <View style={{ marginTop: 20, alignItems: 'center' }} >
                     <Link
-                        _text={
-                            stylesLogin.txtTransparent
-                        }>
+                        _text={ stylesLogin.txtTransparent}
+                        onPress={() => navigation.navigate('recuperar-contraseña')}
+                        >
                         Olvide mi contraseña
                     </Link>
                 </View>
