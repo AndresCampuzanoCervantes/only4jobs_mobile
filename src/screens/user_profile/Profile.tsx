@@ -27,8 +27,9 @@ const Profile = () => {
         <Image
           source={require('../../resource/image/ONLY4Jobs-icon-white.png')}
           style={{
-            marginTop: 20,
             height: 210,
+            marginTop: 20,
+
             width: 220,
             margin: 70,
             justifyContent: 'center',
