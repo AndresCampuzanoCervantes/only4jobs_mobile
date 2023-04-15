@@ -1,6 +1,6 @@
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import React from 'react';
-import { Login, Register } from '../screens/login/';
+import { Login, RecoverPassword, Register } from '../screens/login/';
 import DrawerNavigator from './DrawerNavigator';
 
 const Stack = createNativeStackNavigator();
@@ -13,7 +13,7 @@ const StackNavigator = () => {
       }}>
       <Stack.Screen name="login" component={Login} />
       <Stack.Screen name="registro" component={Register} />
-      <Stack.Screen name="recuperar-contraseña" component={Login} />
+      <Stack.Screen name="recuperar-contraseña" component={RecoverPassword} />
       <Stack.Screen name="home" component={DrawerNavigator} />
     </Stack.Navigator>
   );
