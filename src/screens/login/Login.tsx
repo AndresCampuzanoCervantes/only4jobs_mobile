@@ -1,5 +1,5 @@
 /* eslint-disable react-native/no-inline-styles */
-import React from 'react';
+import React, { useState } from 'react';
 import { ScrollView, View, TouchableOpacity, Image } from 'react-native';
 import { colors, styles, stylesLogin } from '../../theme/appTheme';
 import Icons from 'react-native-vector-icons/MaterialIcons';
@@ -10,7 +10,8 @@ import useLogin from '../../hook/useLogin';
 
 interface Props extends StackScreenProps<any, any> { }
 const Login = ({ navigation }: Props) => {
-    const { show, setShow, values, setValues } = useLogin();
+    const {values, setValues } = useLogin();
+    const [show, setShow] = useState(false);
 
     return (
         <ScrollView contentContainerStyle={[stylesLogin.container, styles.globalMargin]}>

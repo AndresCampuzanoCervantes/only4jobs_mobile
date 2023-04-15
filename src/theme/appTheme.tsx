@@ -35,7 +35,7 @@ export const stylesLogin = StyleSheet.create({
         display: 'flex',
         position: 'absolute',
         right: 0,
-        top: 350,
+        top: '50%',
     },
     button: {
         borderRadius: 10,
