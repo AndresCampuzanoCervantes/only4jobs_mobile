@@ -1,6 +1,8 @@
 /* eslint-disable react-native/no-inline-styles */
+import {Input} from 'native-base';
 import React from 'react';
-import {Image, StyleSheet, TextInput, View} from 'react-native';
+import {StyleSheet, View} from 'react-native';
+import {default as Icon} from 'react-native-vector-icons/MaterialIcons';
 import {colors} from '../theme/appTheme';
 
 const ViewSearch = (props: any) => {
@@ -16,21 +18,27 @@ const ViewSearch = (props: any) => {
             borderRadius: 10,
             alignItems: 'center',
           }}>
-          <Image
-            source={require('../../recursos/images/icon-search.png')}
-            style={{
-              marginLeft: 4,
-              marginRight: 4,
-              height: 22,
-              width: 22,
-            }}
-          />
-
-          <TextInput
-            value={props.search}
-            onChangeText={text => onChange(text)}
-            style={styles.textSearch}
+          <Input
+            type="text"
+            color="black"
+            backgroundColor="blue.200"
+            marginY={5}
+            keyboardType="email-address"
+            InputRightElement={
+              <Icon
+                name="search"
+                size={24}
+                color={colors.primary}
+                style={{
+                  backgroundColor: colors.tertiary,
+                  padding: 5,
+                  borderRadius: 5,
+                }}
+              />
+            }
             placeholder="Buscar"
+            onChangeText={text => onChange(text)}
+            value={props.search}
           />
         </View>
       </View>
