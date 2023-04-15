@@ -7,6 +7,7 @@ import {colors} from '../../theme/appTheme';
 
 const Job = () => {
   //busqueda
+
   const [, setSearch] = useState('');
 
   return (
