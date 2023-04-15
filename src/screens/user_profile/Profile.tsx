@@ -1,8 +1,7 @@
 /* eslint-disable react-native/no-inline-styles */
 /* eslint-disable @typescript-eslint/no-unused-vars */
 import React, {useState} from 'react';
-import {View, Text, StyleSheet, TouchableOpacity} from 'react-native';
-import {Image, ScrollView} from 'native-base';
+import {View, Text,Image, ScrollView, StyleSheet, TouchableOpacity} from 'react-native';
 import {colors} from '../../theme/appTheme';
 
 const Profile = () => {
@@ -33,7 +32,7 @@ const Profile = () => {
             marginTop: 20,
 
             width: 220,
-            margin: 70,
+            margin: 30,
             justifyContent: 'center',
             alignSelf: 'center',
           }}
