@@ -4,7 +4,7 @@ export const colors = {
     primary: '#249AE3',
     secondary: '#2DA3DA',
     tertiary: '#B5E2FC',
-    cuarto: '##244ae3',
+    cuarto: '#244ae3',
     while: 'white',
 };
 
