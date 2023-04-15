@@ -9,7 +9,7 @@ import {colors, styles, stylesLogin} from '../../theme/appTheme';
 
 interface Props extends StackScreenProps<any, any> {}
 const Login = ({navigation}: Props) => {
-  const {values, setValues} = useLogin(navigation as any);
+  const {values, setValues,signIn} = useLogin({navigation} as any);
   const [show, setShow] = useState(false);
 
   return (
@@ -25,7 +25,7 @@ const Login = ({navigation}: Props) => {
         <View>
           <Input
             type="text"
-            color="white"
+            color="black"
             backgroundColor="blue.200"
             marginY={5}
             keyboardType="email-address"
@@ -43,7 +43,7 @@ const Login = ({navigation}: Props) => {
           />
           <Input
             type={show ? 'text' : 'password'}
-            color="white"
+            color="black"
             backgroundColor="blue.200"
             marginTop={5}
             keyboardType="default"
@@ -79,7 +79,7 @@ const Login = ({navigation}: Props) => {
         <View style={{marginTop: 50}}>
           <TouchableOpacity
             style={stylesLogin.button}
-            onPress={() => navigation.replace('home')}>
+            onPress={signIn}>
             <Text fontWeight={700} style={stylesLogin.textbutton}>
               Iniciar sesión
             </Text>

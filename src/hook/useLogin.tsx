@@ -7,8 +7,8 @@ import { StackScreenProps } from '@react-navigation/stack';
 interface Props extends StackScreenProps<any, any> { }
 const useLogin = ({ navigation }: Props) => {
     const [values, setValues] = useState({
-        email: '',
-        password: '',
+        email: 'admin@gmail.com',
+        password: 'Prueba123*',
     });
     const { setSession } = useContext(UserContext);
     const toast = useToast();

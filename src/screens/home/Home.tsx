@@ -1,7 +1,6 @@
 /* eslint-disable react-native/no-inline-styles */
-import {Image, ScrollView} from 'native-base';
 import React from 'react';
-import {View} from 'react-native';
+import {View,Image, ScrollView} from 'react-native';
 import Card from '../../components/Card';
 import {colors} from '../../theme/appTheme';
 
