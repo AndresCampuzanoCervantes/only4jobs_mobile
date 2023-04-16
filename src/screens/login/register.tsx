@@ -1,10 +1,10 @@
+import {StackScreenProps} from '@react-navigation/stack';
 import {Icon, Input, Text} from 'native-base';
 import React, {useState} from 'react';
 import {Image, ScrollView, TouchableOpacity, View} from 'react-native';
 import Icons from 'react-native-vector-icons/MaterialIcons';
 import useRegister from '../../hook/useRegister';
 import {styles, stylesLogin} from '../../theme/appTheme';
-import { StackScreenProps } from '@react-navigation/stack';
 
 interface Props extends StackScreenProps<any, any> {}
 const Register = ({navigation}: Props) => {
