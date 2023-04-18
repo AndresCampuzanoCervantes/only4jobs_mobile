@@ -1,6 +1,14 @@
+/* eslint-disable react-native/no-inline-styles */
+/* eslint-disable @typescript-eslint/no-unused-vars */
 import React, {useState} from 'react';
-import {View, Text, StyleSheet, TouchableOpacity} from 'react-native';
-import {Image, ScrollView} from 'native-base';
+import {
+  View,
+  Text,
+  Image,
+  ScrollView,
+  StyleSheet,
+  TouchableOpacity,
+} from 'react-native';
 import {colors} from '../../theme/appTheme';
 
 const Profile = () => {
@@ -31,7 +39,7 @@ const Profile = () => {
             marginTop: 20,
 
             width: 220,
-            margin: 70,
+            margin: 30,
             justifyContent: 'center',
             alignSelf: 'center',
           }}
@@ -91,20 +99,16 @@ const Profile = () => {
   );
 };
 
-const setPersonalInfo = (firstName, lastName, dateOfBirth) => {
-  setPersonalInfo({
-    firstName: firstName,
-    lastName: lastName,
-    dateOfBirth: dateOfBirth,
-  });
+const setPersonalInfo = (
+  firstName: string,
+  lastName: string,
+  dateOfBirth: string,
+) => {
+  setPersonalInfo(firstName, lastName, dateOfBirth);
 };
 
-const setContactInfo = (email, phone, country) => {
-  setContactInfo({
-    email: email,
-    phone: phone,
-    country: country,
-  });
+const setContactInfo = (email: string, phone: string, country: string) => {
+  setContactInfo(email, phone, country);
 };
 
 const styles = StyleSheet.create({
