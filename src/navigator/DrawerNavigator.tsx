@@ -4,12 +4,12 @@ import React, { useContext } from 'react';
 import { DrawerScreenProps, createDrawerNavigator } from '@react-navigation/drawer';
 import Home from '../screens/home/Home';
 import Job from '../screens/job/Job';
-import Profile from '../screens/user_profile/Profile';
 import { Text, TouchableOpacity } from 'react-native';
 import Icons from 'react-native-vector-icons/MaterialIcons';
 import { colors } from '../theme/appTheme';
 import { StackScreenProps } from '@react-navigation/stack';
 import { UserContext } from '../context/Usuario';
+import ProfileBottomTabNavigator from './ProfileBottomTabNavigator';
 
 const Drawer = createDrawerNavigator();
 
@@ -51,7 +51,7 @@ const DrawerNavigator = (propsStack:PropsStack) => {
     })}>
       <Drawer.Screen name="start" options={{ title: 'Inicio' }} component={Home} />
       <Drawer.Screen name="job" options={{ title: 'Trabajo' }} component={Job} />
-      <Drawer.Screen name="profile" options={{ title: 'Perfil' }} component={Profile} />
+      <Drawer.Screen name="profile" options={{ title: 'Perfil' }} component={ProfileBottomTabNavigator} />
     </Drawer.Navigator>
   );
 };
